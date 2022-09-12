@@ -1,0 +1,41 @@
+.accueil_container {
+  /* background-color: lightblue; */
+  text-align: center;
+}
+
+/* .accueil_title {
+  background-color: yellow;
+} */
+
+.card_container {
+  width: 80%;
+  background-color: #fff;
+  margin: auto;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.card_container img {
+  border-radius: 50px;
+}
+
+.card_container p:first-child {
+  color: red;
+  margin-top: 20px;
+}
+
+.accueil_container button {
+  margin-top: 20px;
+}
+
+@media only screen and (min-width: 600px) {
+  .card_container {
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .card_container {
+    width: 80%;
+  }
+}
