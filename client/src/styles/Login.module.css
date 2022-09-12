@@ -1,0 +1,56 @@
+/* font-family: 'Open Sans', sans-serif; */
+/* font-family: 'Raleway', sans-serif; */
+
+.post_img {
+  max-width: 100%;
+  height: auto;
+}
+
+.post {
+  position: relative;
+  margin: 20px;
+  background-color: #fff;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.post_title {
+  margin-top: 0;
+  font-family: "Raleway", sans-serif;
+}
+
+.post_info {
+  padding: 20px;
+}
+
+/* .post_form {
+  background-color: yellow;
+} */
+
+.loginBtn {
+  margin: 15px;
+}
+
+@media only screen and (min-width: 600px) {
+  .post {
+    /* background-color: yellow; */
+    width: 70%;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  img {
+    max-width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .post {
+    /* background-color: lightblue; */
+    padding: 20px;
+    /* height: 450px; */
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
