@@ -8,8 +8,6 @@
 
 .post_title {
   margin-top: 0;
-  font-weight: 900;
-  letter-spacing: 10px;
 }
 
 .post_info {
@@ -30,6 +28,7 @@
   margin-top: 20px;
 }
 
+/* Style du bouton */
 .btn_container {
   margin-top: 20px;
 }

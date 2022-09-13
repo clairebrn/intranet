@@ -1,11 +1,13 @@
 .accueil_container {
-  /* background-color: lightblue; */
   text-align: center;
+  margin-top: 40px;
 }
 
-/* .accueil_title {
-  background-color: yellow;
-} */
+.accueil_title p {
+  font-size: 20px;
+  letter-spacing: 3px;
+  margin-top: -20px;
+}
 
 .card_container {
   width: 80%;
@@ -13,19 +15,42 @@
   margin: auto;
   border-radius: 10px;
   padding: 10px;
+  border: 2px solid black;
+  box-shadow: 5px -5px 0 -2px white, 5px -5px, 10px -10px 0 -2px white,
+    10px -10px;
 }
 
 .card_container img {
   border-radius: 50px;
 }
 
-.card_container p:first-child {
-  color: red;
-  margin-top: 20px;
+.card_container span {
+  font-weight: 900;
 }
 
-.accueil_container button {
+/* Style du bouton */
+.btn_container {
   margin-top: 20px;
+}
+.btn_container button {
+  margin: 15px;
+  height: 35px;
+  width: auto;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-family: "Raleway", sans-serif;
+  letter-spacing: 2px;
+  font-weight: 900;
+}
+.shadow {
+  box-shadow: 0 0 0 -2px white, 0 0, 0 0 0 -2px white, 0 0;
+  transition: box-shadow 1s;
+}
+.shadow:hover {
+  box-shadow: 5px -5px 0 -2px white, 5px -5px, 10px -10px 0 -2px white,
+    10px -10px;
 }
 
 @media only screen and (min-width: 600px) {
