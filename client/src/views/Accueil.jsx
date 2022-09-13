@@ -9,7 +9,7 @@ const Accueil = () => {
     async function fetchData() {
       const response = await APIService.getCollaborateurs();
 
-      console.log("réponse dy serveur", response);
+      console.log("réponse du serveur", response);
 
       setCollaborateurs(response);
     }

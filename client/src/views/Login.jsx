@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import style from "../styles/Login.module.css";
+import image from "../assets/logoipsum-271.svg";
+
 // import { Link } from "react-router-dom";
 import * as APIService from "../services/Api.service";
 
@@ -27,9 +29,7 @@ const Login = () => {
   return (
     <div className={style.body}>
       <div className={style.post}>
-        <div className={style.post_img}>
-          <img src="https://picsum.photos/400/200" alt="" />
-        </div>
+        <div className={style.post_logo}></div>
 
         <div className={style.post_info}>
           <h1 className={style.post_title}>Connexion</h1>
@@ -47,7 +47,7 @@ const Login = () => {
                   onInput={updateForm}
                 />
               </div>
-              <div className={style.label}>
+              <div className={style.post_label}>
                 <label htmlFor="password">Mot de passe</label> <br />
                 <input
                   type="password"
@@ -56,9 +56,11 @@ const Login = () => {
                   onInput={updateForm}
                 />
               </div>
-              <button type="submit" className={style.loginBtn}>
-                Connexion
-              </button>
+              <div className={style.btn_container}>
+                <button type="submit" className={style.shadow}>
+                  Let's go !
+                </button>
+              </div>
             </form>
           </div>
         </div>
