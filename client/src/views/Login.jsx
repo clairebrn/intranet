@@ -1,8 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import style from "../styles/Login.module.css";
 // import { Link } from "react-router-dom";
+import * as APIService from "../services/Api.service";
 
 const Login = () => {
+  const [formData, setFormData] = useState({});
+
+  function updateForm(event) {
+    setFormData({
+      ...formData,
+      [event.target.name]: event.target.value,
+    });
+  }
+
+  async function login(event) {
+    event.preventDefault();
+
+    const response = await APIService.login(formData);
+
+    console.log("réponse du serveur", response);
+
+    // stockage du token dans le navigateur
+    localStorage.setItem("token", response.token);
+  }
+
   return (
     <div className={style.body}>
       <div className={style.post}>
@@ -13,15 +34,27 @@ const Login = () => {
         <div className={style.post_info}>
           <h1 className={style.post_title}>Connexion</h1>
 
+          {/* <pre>{JSON.stringify(formData, null, 2)}</pre> */}
+
           <div className={style.post_form}>
-            <form action="">
+            <form action="" onSubmit={login}>
               <div className={style.post_label}>
                 <label htmlFor="email">Login</label> <br />
-                <input type="text" name="email" id="email" />
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  onInput={updateForm}
+                />
               </div>
               <div className={style.label}>
-                <label htmlFor="passw">Mot de passe</label> <br />
-                <input type="text" name="passw" id="passw" />
+                <label htmlFor="password">Mot de passe</label> <br />
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  onInput={updateForm}
+                />
               </div>
               <button type="submit" className={style.loginBtn}>
                 Connexion

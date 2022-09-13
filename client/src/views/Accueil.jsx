@@ -1,7 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import style from "../styles/Accueil.module.css";
+import * as APIService from "../services/Api.service";
 
 const Accueil = () => {
+  const [collaborateurs, setCollaborateurs] = useState(null);
+
+  useEffect(() => {
+    async function fetchData() {
+      const response = await APIService.getCollaborateurs();
+
+      console.log("réponse dy serveur", response);
+
+      setCollaborateurs(response);
+    }
+
+    fetchData();
+  }, []);
+
   return (
     <div className={style.accueil_container}>
       <div className={style.accueil_title}>
