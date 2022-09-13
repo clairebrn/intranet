@@ -3,10 +3,14 @@
   margin-top: 40px;
 }
 
-.accueil_title p {
+.accueil_title h1 {
   font-size: 20px;
+}
+
+.accueil_title p {
+  font-size: 18px;
   letter-spacing: 3px;
-  margin-top: -20px;
+  margin-top: -15px;
 }
 
 .card_container {
@@ -55,12 +59,12 @@
 
 @media only screen and (min-width: 600px) {
   .card_container {
-    width: 80%;
+    width: 60%;
   }
 }
 
 @media only screen and (min-width: 1024px) {
   .card_container {
-    width: 80%;
+    width: 40%;
   }
 }

@@ -20,7 +20,7 @@ const Accueil = () => {
   return (
     <div className={style.accueil_container}>
       <div className={style.accueil_title}>
-        <h1>Hello Bernardo !!</h1>
+        <h1>Hello Bernardo</h1>
         <p>Connais-tu machin ?</p>
       </div>
       <div className={style.card_container}>
