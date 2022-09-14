@@ -4,12 +4,12 @@
 
 .post_logo {
   margin: 0;
+  margin-top: 20px;
   background-image: url(../assets/logoipsum-271.svg);
   height: 50px;
   background-repeat: no-repeat;
   /* background-size: cover; */
   background-position: center;
-  /* background-color: red; */
 }
 
 .accueil_title h1 {
@@ -25,7 +25,6 @@
 .accueil_title span {
   font-weight: 900;
   font-size: 35px;
-  border: 1px solid red;
 }
 
 .accueil_title span:hover {

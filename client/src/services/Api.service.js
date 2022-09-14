@@ -23,26 +23,3 @@ export function login(credentials) {
 export function getCollaborateurs() {
   return instance.get("/collaborateurs").then((response) => response.data);
 }
-
-// function login(token) {
-//   var myHeaders = new Headers();
-//   myHeaders.append("Cache-Control", "no-cache");
-//   myHeaders.append("Accept", "*/*");
-//   myHeaders.append("Accept-Encoding", "gzip, deflate");
-//   myHeaders.append("Connection", "keep-alive");
-//   myHeaders.append("Authorization", `Bearer ${token}`);
-
-//   var raw = "";
-
-//   var requestOptions = {
-//     method: "POST",
-//     headers: myHeaders,
-//     body: raw,
-//     redirect: "follow",
-//   };
-
-//   fetch("http://localhost:7000/api/login", requestOptions)
-//     .then((response) => response.json())
-//     .then((result) => result)
-//     .catch((error) => console.log("error", error));
-// }

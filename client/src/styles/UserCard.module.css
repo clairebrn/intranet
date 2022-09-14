@@ -21,7 +21,6 @@
 .card_container span {
   font-weight: 900;
   font-size: 35px;
-  border: 1px solid green;
 }
 
 .card_container p:first-child {
