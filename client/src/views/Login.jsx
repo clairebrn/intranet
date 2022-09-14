@@ -1,12 +1,14 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { userInfo } from "../reducers/user.reducer";
+
 import style from "../styles/Login.module.css";
 import image from "../assets/logoipsum-271.svg";
-
-// import { Link } from "react-router-dom";
 import * as APIService from "../services/Api.service";
 
 const Login = () => {
   const [formData, setFormData] = useState({});
+  const dispatch = useDispatch();
 
   function updateForm(event) {
     setFormData({
@@ -19,8 +21,9 @@ const Login = () => {
     event.preventDefault();
 
     const response = await APIService.login(formData);
-
     console.log("réponse du serveur", response);
+    //envoyer les informations du user au reducer
+    dispatch(userInfo(response.user));
 
     // stockage du token dans le navigateur
     localStorage.setItem("token", response.token);

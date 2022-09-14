@@ -37,8 +37,8 @@ const Accueil = () => {
         {/* <div>
           <img src="https://picsum.photos/100/100" alt="" />
         </div> */}
-        <p>
-          <span>John Doe</span>
+        <p className={style.animated_font}>
+          <span>John</span> Doe
         </p>
         <div>
           <img src="https://picsum.photos/100/100" alt="" />
@@ -47,7 +47,7 @@ const Accueil = () => {
           <FontAwesomeIcon icon={faLocationDot}></FontAwesomeIcon> Paris, France
         </p>
         <p>
-          <FontAwesomeIcon icon={faEnvelope}></FontAwesomeIcon>{" "}
+          <FontAwesomeIcon icon={faEnvelope}></FontAwesomeIcon>
           john.doe@email.com
         </p>
 
