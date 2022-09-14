@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 import * as APIService from "../services/Api.service";
 
 import style from "../styles/Accueil.module.css";
@@ -13,15 +14,15 @@ import {
 const Accueil = () => {
   const [collaborateurs, setCollaborateurs] = useState(null);
 
+  const user = useSelector((state) => state.user.value);
+  console.log("user ? : ", user);
+
   useEffect(() => {
     async function fetchData() {
       const response = await APIService.getCollaborateurs();
-
       console.log("réponse du serveur", response);
-
       setCollaborateurs(response);
     }
-
     fetchData();
   }, []);
 
@@ -30,7 +31,7 @@ const Accueil = () => {
       <div className={style.post_logo}></div>
 
       <div className={style.accueil_title}>
-        <h1>Hello Bernardo</h1>
+        <h1>Hello {user?.firstname}</h1>
         <p>Connais-tu machin ?</p>
       </div>
       <div className={style.card_container}>

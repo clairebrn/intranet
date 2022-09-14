@@ -6,10 +6,11 @@ import style from "../styles/Login.module.css";
 import image from "../assets/logoipsum-271.svg";
 import * as APIService from "../services/Api.service";
 
-const Login = () => {
+const Login = ({ setToken }) => {
   const [formData, setFormData] = useState({});
   const dispatch = useDispatch();
 
+  //fonction pour récupérer les valeurs du formulaire login
   function updateForm(event) {
     setFormData({
       ...formData,
@@ -24,9 +25,14 @@ const Login = () => {
     console.log("réponse du serveur", response);
     //envoyer les informations du user au reducer
     dispatch(userInfo(response.user));
+    //stockage du user dans le navigateur
+    sessionStorage.setItem("user", JSON.stringify(response.user));
 
     // stockage du token dans le navigateur
     localStorage.setItem("token", response.token);
+
+    // passage du token au useState
+    setToken(response.token);
   }
 
   return (
