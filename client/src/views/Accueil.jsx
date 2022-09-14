@@ -10,12 +10,12 @@ const Accueil = () => {
   const [collaborateurs, setCollaborateurs] = useState(null);
 
   const user = useSelector((state) => state.user.value);
-  console.log("user ? : ", user);
+  // console.log("user ? : ", user);
 
   useEffect(() => {
     async function fetchData() {
       const response = await APIService.getCollaborateurs();
-      console.log("réponse du serveur", response);
+      // console.log("réponse du serveur", response);
       setCollaborateurs(response);
     }
     fetchData();

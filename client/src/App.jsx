@@ -1,7 +1,9 @@
-import Login from "./views/Login";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Accueil from "./views/Accueil";
 import { useState } from "react";
+
+import Login from "./views/Login";
+import Accueil from "./views/Accueil";
+import ListeCollaborateurs from "./views/ListeCollaborateurs";
 
 function App() {
   const [token, setToken] = useState(null);
@@ -24,6 +26,10 @@ function App() {
         <div>
           <Routes>
             <Route path="/" element={<Accueil />} />
+            <Route
+              path="/listecollaborateurs"
+              element={<ListeCollaborateurs />}
+            />
           </Routes>
         </div>
       </BrowserRouter>
