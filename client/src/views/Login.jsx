@@ -48,7 +48,8 @@ const Login = ({ setToken }) => {
           <div className={style.post_form}>
             <form action="" onSubmit={login}>
               <div className={style.post_label}>
-                <label htmlFor="email">Login</label> <br />
+                <label htmlFor="email">Login</label>
+                <br />
                 <input
                   type="email"
                   name="email"
@@ -57,7 +58,8 @@ const Login = ({ setToken }) => {
                 />
               </div>
               <div className={style.post_label}>
-                <label htmlFor="password">Mot de passe</label> <br />
+                <label htmlFor="password">Mot de passe</label>
+                <br />
                 <input
                   type="password"
                   name="password"

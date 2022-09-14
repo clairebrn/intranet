@@ -31,7 +31,9 @@ const Accueil = () => {
       <div className={style.post_logo}></div>
 
       <div className={style.accueil_title}>
-        <h1>Hello {user?.firstname}</h1>
+        <h1>
+          Hello <span>{user?.firstname}</span>
+        </h1>
         <p>Connais-tu machin ?</p>
       </div>
       <div className={style.card_container}>
@@ -48,7 +50,7 @@ const Accueil = () => {
           <FontAwesomeIcon icon={faLocationDot}></FontAwesomeIcon> Paris, France
         </p>
         <p>
-          <FontAwesomeIcon icon={faEnvelope}></FontAwesomeIcon>
+          <FontAwesomeIcon icon={faEnvelope}></FontAwesomeIcon>{" "}
           john.doe@email.com
         </p>
 
