@@ -2,14 +2,16 @@ import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import * as APIService from "../services/Api.service";
 
+import UserCard from "../components/UserCard";
+
 import style from "../styles/Accueil.module.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faEnvelope,
-  faLocationDot,
-  faPhone,
-  faBirthdayCake,
-} from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import {
+//   faEnvelope,
+//   faLocationDot,
+//   faPhone,
+//   faBirthdayCake,
+// } from "@fortawesome/free-solid-svg-icons";
 
 const Accueil = () => {
   const [collaborateurs, setCollaborateurs] = useState(null);
@@ -29,44 +31,14 @@ const Accueil = () => {
   return (
     <div className={style.accueil_container}>
       <div className={style.post_logo}></div>
-
       <div className={style.accueil_title}>
         <h1>
           Hello <span>{user?.firstname}</span>
         </h1>
-        <p>Connais-tu machin ?</p>
+        <p>Aujourd'hui, je te présente : </p>
       </div>
-      <div className={style.card_container}>
-        {/* <div>
-          <img src="https://picsum.photos/100/100" alt="" />
-        </div> */}
-        <p className={style.animated_font}>
-          <span>John</span> Doe
-        </p>
-        <div>
-          <img src="https://picsum.photos/100/100" alt="" />
-        </div>
-        <p>
-          <FontAwesomeIcon icon={faLocationDot}></FontAwesomeIcon> Paris, France
-        </p>
-        <p>
-          <FontAwesomeIcon icon={faEnvelope}></FontAwesomeIcon>{" "}
-          john.doe@email.com
-        </p>
-
-        <p>
-          <FontAwesomeIcon icon={faPhone}></FontAwesomeIcon> 01 02 03 04 05
-        </p>
-        {/* test pour animer l'icone */}
-        {/* <p>
-          <FontAwesomeIcon icon={faPhone} spin></FontAwesomeIcon> 01 02 03 04 05
-        </p> */}
-        <p>
-          <FontAwesomeIcon icon={faBirthdayCake}></FontAwesomeIcon> 17 janvier
-          (35ans)
-        </p>
-      </div>
-
+      <UserCard />
+      {/* bouton pour afficher un autre profil */}
       <div className={style.btn_container}>
         <button type="submit" className={style.shadow}>
           Dire bonjour à quelqu'un d'autre
