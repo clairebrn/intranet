@@ -28,7 +28,6 @@ function App() {
       <BrowserRouter>
         <div>
           <NavBar />
-
           <Routes>
             <Route path="/" element={<Accueil />} />
             <Route
