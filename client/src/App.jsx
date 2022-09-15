@@ -11,6 +11,7 @@ function App() {
   // const [token, setToken] = useState(null);
 
   // const localStorageToken = localStorage.getItem("token");
+  // console.log(localStorageToken);
 
   // console.log("token :", token);
 
@@ -27,6 +28,7 @@ function App() {
       <BrowserRouter>
         <div>
           <NavBar />
+
           <Routes>
             <Route path="/" element={<Accueil />} />
             <Route
