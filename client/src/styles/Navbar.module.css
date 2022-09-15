@@ -1,7 +1,7 @@
 .body {
   height: 40px;
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   background-color: #fff;
   padding: 10px;

@@ -26,28 +26,45 @@ const UserCard = ({ collaborateur }) => {
   return (
     <div className={style.card_container}>
       <p>
-        <span>{collaborateur.firstname}</span> {collaborateur.lastname}
+        <span>{collaborateur.firstname}</span> {collaborateur.lastname} <br />
       </p>
+
+      {/* <p className={style.service}>{collaborateur.service}</p> */}
 
       <div>
         <img src="https://picsum.photos/100/100" alt="photo de profil" />
       </div>
 
       <p>
-        <FontAwesomeIcon icon={faLocationDot}></FontAwesomeIcon> Paris, France
+        <FontAwesomeIcon
+          icon={faLocationDot}
+          className={style.icon}
+        ></FontAwesomeIcon>
+        {collaborateur.city}, {collaborateur.country}
       </p>
 
       <p>
-        <FontAwesomeIcon icon={faEnvelope}></FontAwesomeIcon> john.doe@email.com
+        <FontAwesomeIcon
+          icon={faEnvelope}
+          className={style.icon}
+        ></FontAwesomeIcon>
+        {collaborateur.email}
       </p>
 
       <p>
-        <FontAwesomeIcon icon={faPhone}></FontAwesomeIcon> 01 02 03 04 05
+        <FontAwesomeIcon
+          icon={faPhone}
+          className={style.icon}
+        ></FontAwesomeIcon>
+        {collaborateur.phone}
       </p>
 
       <p>
-        <FontAwesomeIcon icon={faBirthdayCake}></FontAwesomeIcon> 17 janvier
-        (35ans)
+        <FontAwesomeIcon
+          icon={faBirthdayCake}
+          className={style.icon}
+        ></FontAwesomeIcon>
+        {collaborateur.birthdate} - 35ans
       </p>
     </div>
   );

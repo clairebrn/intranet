@@ -4,6 +4,8 @@ import * as APIService from "../services/Api.service";
 import UserCard from "../components/UserCard";
 import useToken from "../hooks/useToken";
 
+import style from "../styles/ListeCollaborateurs.module.css";
+
 const ListeCollaborateurs = () => {
   const token = useToken();
   if (!token) return;
@@ -18,12 +20,19 @@ const ListeCollaborateurs = () => {
     }
     fetchData();
   }, []);
+
   return (
-    <div>
+    <div className={style.body_list}>
+      <div className={style.header_container}>
+        <h1>Liste des collaborateurs</h1>
+      </div>
+
       {collaborateurs &&
         collaborateurs.map((collaborateur) => {
           return (
-            <UserCard key={collaborateur.id} collaborateur={collaborateur} />
+            <div className={style.test}>
+              <UserCard key={collaborateur.id} collaborateur={collaborateur} />
+            </div>
           );
         })}
     </div>

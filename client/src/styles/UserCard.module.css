@@ -1,5 +1,5 @@
 .card_container {
-  width: 80%;
+  width: 90%;
   background-color: #fff;
   margin: auto;
   border-radius: 10px;
@@ -14,8 +14,18 @@
 }
 
 .card_container p {
-  letter-spacing: 3px;
+  letter-spacing: 1px;
   font-weight: 600;
+  font-size: 12px;
+}
+
+.card_container p:hover {
+  font-size: 14px;
+  /* cursor: pointer; */
+}
+
+.icon {
+  padding-right: 10px;
 }
 
 .card_container span {
@@ -52,10 +62,26 @@
   .card_container {
     width: 60%;
   }
+  .card_container p {
+    font-size: 14px;
+  }
+  .card_container p:hover {
+    font-size: 16px;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
   .card_container {
     width: 40%;
   }
+  .card_container p {
+    font-size: 18px;
+  }
+  .card_container p:hover {
+    font-size: 20px;
+  }
+}
+
+.service {
+  color: red;
 }

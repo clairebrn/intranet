@@ -1,0 +1,15 @@
+.body_list h1 {
+  font-size: 23px;
+  border-color: aqua;
+}
+
+.body_list {
+  /* background-color: green; */
+  text-align: center;
+  padding: 10px;
+}
+
+.test {
+  /* background-color: aquamarine; */
+  padding-top: 20px;
+}
