@@ -23,3 +23,9 @@ export function login(credentials) {
 export function getCollaborateurs() {
   return instance.get("/collaborateurs").then((response) => response.data);
 }
+
+export function getRandomCollaborateur() {
+  return instance
+    .get("/collaborateurs/random")
+    .then((response) => response.data);
+}

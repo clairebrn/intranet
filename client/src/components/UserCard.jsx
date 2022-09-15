@@ -11,22 +11,22 @@ import {
   faBirthdayCake,
 } from "@fortawesome/free-solid-svg-icons";
 
-const UserCard = () => {
-  //   const [collaborateurs, setCollaborateurs] = useState(null);
+const UserCard = ({ collaborateur }) => {
+  // const [collaborateurs, setCollaborateurs] = useState(null);
 
-  //   useEffect(() => {
-  //     async function fetchData() {
-  //       const response = await APIService.getCollaborateurs();
-  //       console.log("réponse du serveur", response);
-  //       setCollaborateurs(response);
-  //     }
-  //     fetchData();
-  //   }, []);
+  // useEffect(() => {
+  //   async function fetchData() {
+  //     const response = await APIService.getCollaborateurs();
+  //     console.log("réponse du serveur", response);
+  //     setCollaborateurs(response);
+  //   }
+  //   fetchData();
+  // }, []);
 
   return (
     <div className={style.card_container}>
       <p>
-        <span>John</span> Doe
+        <span>{collaborateur.firstname}</span> {collaborateur.lastname}
       </p>
 
       <div>

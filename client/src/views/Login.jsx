@@ -5,10 +5,12 @@ import { userInfo } from "../reducers/user.reducer";
 import style from "../styles/Login.module.css";
 import image from "../assets/logoipsum-271.svg";
 import * as APIService from "../services/Api.service";
+import { useNavigate } from "react-router-dom";
 
-const Login = ({ setToken }) => {
+const Login = (/* { setToken } */) => {
   const [formData, setFormData] = useState({});
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   //fonction pour récupérer les valeurs du formulaire login
   function updateForm(event) {
@@ -32,7 +34,9 @@ const Login = ({ setToken }) => {
     localStorage.setItem("token", response.token);
 
     // passage du token au useState
-    setToken(response.token);
+    // setToken(response.token);
+
+    navigate("/"); // une fois connecté, on va a l'accueil
   }
 
   return (

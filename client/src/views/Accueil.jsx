@@ -5,21 +5,27 @@ import * as APIService from "../services/Api.service";
 import UserCard from "../components/UserCard";
 
 import style from "../styles/Accueil.module.css";
+import useToken from "../hooks/useToken";
 
 const Accueil = () => {
-  const [collaborateurs, setCollaborateurs] = useState(null);
+  const token = useToken();
+  if (!token) return;
+
+  const [randomCollaborateur, setRandomCollaborateur] = useState(null);
 
   const user = useSelector((state) => state.user.value);
-  // console.log("user ? : ", user);
+
+  console.log("user accueil ? : ", user);
 
   useEffect(() => {
-    async function fetchData() {
-      const response = await APIService.getCollaborateurs();
-      // console.log("réponse du serveur", response);
-      setCollaborateurs(response);
-    }
     fetchData();
   }, []);
+
+  async function fetchData() {
+    const response = await APIService.getRandomCollaborateur();
+    // console.log("réponse du serveur", response);
+    setRandomCollaborateur(response);
+  }
 
   return (
     <div className={style.accueil_container}>
@@ -33,10 +39,11 @@ const Accueil = () => {
         <p>Aujourd'hui, je te présente : </p>
       </div>
       {/* composant pour afficher une carte profil */}
-      <UserCard />
+      {randomCollaborateur && <UserCard collaborateur={randomCollaborateur} />}
+
       {/* bouton pour afficher un autre profil */}
       <div className={style.btn_container}>
-        <button type="submit" className={style.shadow}>
+        <button onClick={fetchData} type="submit" className={style.shadow}>
           Dire bonjour à quelqu'un d'autre
         </button>
       </div>
