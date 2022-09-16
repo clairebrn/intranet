@@ -5,6 +5,7 @@ import Accueil from "./views/Accueil";
 import ListeCollaborateurs from "./views/ListeCollaborateurs";
 import NavBar from "./components/NavBar";
 import Logout from "./views/Logout";
+import UserProfil from "./views/UserProfil";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
               element={<ListeCollaborateurs />}
             />
             <Route path="/login" element={<Login />} />
+            <Route path="/profil" element={<UserProfil />} />
             <Route path="/logout" element={<Logout />} />
           </Routes>
         </div>

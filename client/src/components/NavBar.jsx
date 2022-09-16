@@ -12,9 +12,9 @@ import logo from "../assets/logoipsum-271.svg";
 const NavBar = () => {
   const userStock = useSelector((state) => state.user.value);
 
-  useEffect(() => {
-    console.log("stockage du user :", userStock);
-  }, []);
+  // useEffect(() => {
+  //   console.log("stockage du user :", userStock);
+  // }, []);
 
   return (
     <>
@@ -24,12 +24,17 @@ const NavBar = () => {
           <ul>
             <li className={style.logo}>
               <NavLink to="/">
-                <img src={logo} alt="logo" />
+                {/* <img src={logo} alt="logo" /> */}LOGO
               </NavLink>
             </li>
             <li>
               <NavLink to="/listecollaborateurs">
                 Liste des collaborateurs
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/profil">
+                {/* Mon profil {collaborateur.firstname} */} Mon profil
               </NavLink>
             </li>
             <li>
