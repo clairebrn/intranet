@@ -29,8 +29,6 @@ const Accueil = () => {
 
   return (
     <div className={style.accueil_container}>
-      {/* logo */}
-      {/* <div className={style.post_logo}></div> */}
       {/* titre */}
       <div className={style.accueil_title}>
         <h1>

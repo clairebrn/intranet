@@ -30,7 +30,7 @@ const Login = (/* { setToken } */) => {
     //stockage du user dans le navigateur
     sessionStorage.setItem("user", JSON.stringify(response.user));
 
-    // stockage du token dans le navigateur
+    // stockage du token dans le local storage
     localStorage.setItem("token", response.token);
 
     // passage du token au useState
