@@ -19,7 +19,7 @@ const Login = (/* { setToken } */) => {
       [event.target.name]: event.target.value,
     });
   }
-
+  console.log("fordata :", formData);
   async function login(event) {
     event.preventDefault();
 

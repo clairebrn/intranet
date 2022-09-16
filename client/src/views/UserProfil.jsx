@@ -8,6 +8,33 @@ import style from "../styles/userProfil.module.css";
 import { useSelector } from "react-redux";
 
 const UserProfil = () => {
+  const { value } = useSelector((state) => state.user);
+  console.log("user profil modif : ", value);
+  const [formData, setFormData] = useState(value);
+
+  const token = localStorage.getItem("token");
+  console.log("user profil modif token: ", token);
+
+  //fonction pour récupérer les valeurs du formulaire
+  function updateForm(event) {
+    setFormData({
+      ...formData,
+      [event.target.name]: event.target.value,
+    });
+  }
+  console.log("form :", formData);
+
+  function onSave(event) {
+    event.preventDefault();
+    const result = APIService.updateUser(formData, value.id, token);
+    result
+      .then((res) => {
+        sessionStorage.setItem("user", JSON.stringify(formData));
+        // console.log("reeees : ", res);
+      })
+      .catch((error) => console.log("err : ", error));
+  }
+
   const userStock = useSelector((state) => state.user.value);
   return (
     <div>
@@ -23,46 +50,128 @@ const UserProfil = () => {
           <div className={style.post_label}>
             <label htmlFor="lastname">Nom</label>
             <br />
-            <input type="lastname" name="lastname" id="lastname" />
+            <input
+              defaultValue={value.lastname}
+              type="text"
+              name="lastname"
+              id="lastname"
+              onInput={updateForm}
+            />
           </div>
           <div className={style.post_label}>
             <label htmlFor="firstname">Prénom</label>
             <br />
-            <input type="firstname" name="firstname" id="firstname" />
+            <input
+              defaultValue={value.firstname}
+              type="text"
+              name="firstname"
+              id="firstname"
+              onInput={updateForm}
+            />
           </div>
 
           <div className={style.post_label}>
             <label htmlFor="city">Ville</label>
             <br />
-            <input type="city" name="city" id="city" />
+            <input
+              defaultValue={value.city}
+              type="text"
+              name="city"
+              id="city"
+              onInput={updateForm}
+            />
           </div>
           <div className={style.post_label}>
             <label htmlFor="country">Pays</label>
             <br />
-            <input type="country" name="country" id="country" />
+            <input
+              type="text"
+              name="country"
+              id="country"
+              onInput={updateForm}
+              defaultValue={value.country}
+            />
           </div>
 
           <div className={style.post_label}>
             <label htmlFor="email">Email</label>
             <br />
-            <input type="email" name="email" id="email" />
+            <input
+              type="email"
+              name="email"
+              id="email"
+              onInput={updateForm}
+              defaultValue={value.email}
+            />
           </div>
 
           <div className={style.post_label}>
             <label htmlFor="phone">Telephone</label>
             <br />
-            <input type="phone" name="phone" id="phone" />
+            <input
+              type="tel"
+              name="phone"
+              id="phone"
+              onInput={updateForm}
+              defaultValue={value.phone}
+            />
+          </div>
+
+          <div className={style.post_label}>
+            <label htmlFor="gender">Gender</label>
+            <br />
+            <input
+              type="text"
+              name="gender"
+              id="gender"
+              onInput={updateForm}
+              defaultValue={value.gender}
+            />
+          </div>
+
+          <div className={style.post_label}>
+            <label htmlFor="photo">Photo</label>
+            <br />
+            <input
+              type="text"
+              name="photo"
+              id="photo"
+              onInput={updateForm}
+              defaultValue={value.photo}
+            />
+          </div>
+
+          <div className={style.post_label}>
+            <label htmlFor="service">Service</label>
+            <br />
+            <input
+              type="text"
+              name="service"
+              id="service"
+              onInput={updateForm}
+              defaultValue={value.service}
+            />
           </div>
 
           <div className={style.post_label}>
             <label htmlFor="birthdate">Anniversaire</label>
             <br />
-            <input type="birthdate" name="birthdate" id="birthdate" />
+            <input
+              type="date"
+              name="birthdate"
+              id="birthdate"
+              onInput={updateForm}
+              defaultValue={value.birthdate}
+            />
           </div>
 
           {/* bouton de validation */}
           <div className={style.btn_container}>
-            <button type="submit" className={style.btn_update_profil}>
+            <button
+              onClick={onSave}
+              type="submit"
+              className={style.btn_update_profil}
+            >
               Valider les modifications
             </button>
           </div>

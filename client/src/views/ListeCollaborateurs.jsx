@@ -27,6 +27,15 @@ const ListeCollaborateurs = () => {
         <h1>Liste des collaborateurs</h1>
       </div>
 
+      <div>
+        <select name="" id="">
+          <option value="">--Please choose an option--</option>
+          <option value="lastname">Nom</option>
+          <option value="firstname">Prénom</option>
+          <option value="city">Ville</option>
+        </select>
+      </div>
+
       {collaborateurs &&
         collaborateurs.map((collaborateur) => {
           return (

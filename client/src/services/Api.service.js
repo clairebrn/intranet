@@ -29,3 +29,15 @@ export function getRandomCollaborateur() {
     .get("/collaborateurs/random")
     .then((response) => response.data);
 }
+
+//fonction pour mettre à jour le profil de l'utilisateur connecté
+export function updateUser(credentials, id, token) {
+  return instance
+    .put("/collaborateurs/" + id, credentials, {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer token`,
+      },
+    })
+    .then((response) => response.data);
+}
