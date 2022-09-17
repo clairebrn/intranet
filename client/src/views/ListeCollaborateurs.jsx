@@ -22,12 +22,13 @@ const ListeCollaborateurs = () => {
   }, []);
 
   return (
-    <div>
-      <div className={style.header_container}>
-        <h1>Liste des collaborateurs</h1>
-      </div>
+    <div className={style.list_collaborateurs_container}>
+      <div>
+        <div className={style.header_container}>
+          <h1>Liste des collaborateurs</h1>
+        </div>
 
-      {/* <div>
+        {/* <div>
         <select name="" id="">
           <option value="">--Please choose an option--</option>
           <option value="lastname">Nom</option>
@@ -35,15 +36,21 @@ const ListeCollaborateurs = () => {
           <option value="city">Ville</option>
         </select>
       </div> */}
+      </div>
 
-      {collaborateurs &&
-        collaborateurs.map((collaborateur) => {
-          return (
-            <div className={style.list_card}>
-              <UserCard key={collaborateur.id} collaborateur={collaborateur} />
-            </div>
-          );
-        })}
+      <div className={style.div_deux}>
+        {collaborateurs &&
+          collaborateurs.map((collaborateur) => {
+            return (
+              <div className={style.list_card}>
+                <UserCard
+                  key={collaborateur.id}
+                  collaborateur={collaborateur}
+                />
+              </div>
+            );
+          })}
+      </div>
     </div>
   );
 };
