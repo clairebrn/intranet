@@ -12,11 +12,11 @@ import {
 const UserCard = ({ collaborateur }) => {
   return (
     <div className={style.card_container}>
-      <p>
-        <span>{collaborateur.firstname}</span> {collaborateur.lastname} <br />
-      </p>
+      <div className={style.service}>{collaborateur.service}</div>
 
-      {/* <p className={style.service}>{collaborateur.service}</p> */}
+      <p>
+        <span>{collaborateur.firstname}</span> {collaborateur.lastname}
+      </p>
 
       <div>
         <img src={collaborateur.photo} alt="" />

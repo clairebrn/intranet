@@ -1,15 +1,33 @@
-.body_list h1 {
-  font-size: 23px;
-  border-color: aqua;
+.header_container {
+  margin: 10px;
+  border-radius: 30px;
+  border: 2px solid black;
+  background-color: #fff;
 }
 
-.body_list {
-  /* background-color: green; */
+.header_container h1 {
+  font-size: 12px;
+  letter-spacing: 5px;
   text-align: center;
-  padding: 10px;
 }
 
-.test {
-  /* background-color: aquamarine; */
-  padding-top: 20px;
+.list_card {
+  padding: 20px;
+  text-align: center;
+}
+
+@media only screen and (min-width: 600px) {
+  .header_container {
+    margin: 20px 10px;
+  }
+  .header_container h1 {
+    font-size: 20px;
+    letter-spacing: 12px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .header_container {
+    margin: 20px 300px;
+  }
 }
