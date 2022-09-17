@@ -38,17 +38,19 @@ const UserProfil = () => {
   const userStock = useSelector((state) => state.user.value);
   return (
     <div>
-      <div className={style.user_profil_container}>
+      <div className={style.user_profil_title}>
         <h1>Mon profil</h1>
       </div>
-      <UserCard collaborateur={userStock} />
+      <div className={style.user_profil_card_container}>
+        <UserCard collaborateur={userStock} />
+      </div>
 
       <div className={style.btn_modif}>
-        <button>Modifier mon profil</button>
+        <button className={style.shadow}>Modifier mon profil</button>
       </div>
 
       <div className={style.form_container}>
-        <form action="">
+        <form>
           <div className={style.post_label}>
             <label htmlFor="lastname">Nom</label>
             <br />
@@ -120,6 +122,18 @@ const UserProfil = () => {
           </div>
 
           <div className={style.post_label}>
+            <label htmlFor="birthdate">Anniversaire</label>
+            <br />
+            <input
+              type="date"
+              name="birthdate"
+              id="birthdate"
+              onInput={updateForm}
+              defaultValue={value.birthdate}
+            />
+          </div>
+
+          <div className={style.post_label}>
             <label htmlFor="gender">Gender</label>
             <br />
             <input
@@ -155,9 +169,11 @@ const UserProfil = () => {
             />
           </div>
 
-          <div className={style.post_label}>
-            <label htmlFor="birthdate">Anniversaire</label>
-            <br />
+          {/* test */}
+          {/* <fieldset>
+            <legend>
+              <label htmlFor="birthdate">Anniversaire</label>
+            </legend>
             <input
               type="date"
               name="birthdate"
@@ -165,7 +181,7 @@ const UserProfil = () => {
               onInput={updateForm}
               defaultValue={value.birthdate}
             />
-          </div>
+          </fieldset> */}
 
           {/* bouton de validation */}
           <div className={style.btn_container}>
