@@ -42,7 +42,7 @@ const Accueil = () => {
       {/* bouton pour afficher un autre profil */}
       <div className={style.btn_container}>
         <button onClick={fetchData} type="submit" className={style.shadow}>
-          Dire bonjour à quelqu'un d'autre
+          Next one !
         </button>
       </div>
     </div>

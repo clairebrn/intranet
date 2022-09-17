@@ -13,6 +13,12 @@
 .card_container img {
   border-radius: 50%;
   border: 2px solid black;
+  filter: grayscale(1);
+}
+
+.card_container img:hover {
+  cursor: pointer;
+  filter: grayscale(0);
 }
 
 .card_container p {

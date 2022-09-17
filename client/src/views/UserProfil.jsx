@@ -38,7 +38,9 @@ const UserProfil = () => {
   const userStock = useSelector((state) => state.user.value);
   return (
     <div>
-      <h1 className={style.user_profil_container}>Mon profil</h1>
+      <div className={style.user_profil_container}>
+        <h1>Mon profil</h1>
+      </div>
       <UserCard collaborateur={userStock} />
 
       <div className={style.btn_modif}>

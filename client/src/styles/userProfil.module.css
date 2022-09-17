@@ -1,18 +1,33 @@
 .user_profil_container {
-  background-color: red;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 30px 10px;
 }
 
-.form_container {
+.user_profil_container h1 {
+  border-radius: 30px;
+  border: 2px solid black;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  padding: 5px;
+  font-size: 12px;
+  letter-spacing: 5px;
+}
+
+/* .form_container {
   border-color: azure;
   padding: 20px;
-}
+} */
 
-.btn_modif {
+/* .btn_modif {
   padding: 20px;
   background-color: paleturquoise;
-}
+} */
 
-.btn_container {
+/* .btn_container {
   padding: 20px;
   background-color: palegreen;
-}
+} */
