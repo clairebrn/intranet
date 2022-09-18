@@ -19,7 +19,7 @@ const Login = () => {
       [event.target.name]: event.target.value,
     });
   }
-  console.log("fordata :", formData);
+  console.log("formdata :", formData);
   async function login(event) {
     event.preventDefault();
 
@@ -33,10 +33,7 @@ const Login = () => {
     // stockage du token dans le local storage
     localStorage.setItem("token", response.token);
 
-    // passage du token au useState
-    // setToken(response.token);
-
-    navigate("/"); // une fois connecté, on va a l'accueil
+    navigate("/"); // une fois connecté, je suis redirigé vers la page l'accueil
   }
 
   return (

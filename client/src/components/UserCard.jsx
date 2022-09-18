@@ -51,7 +51,7 @@ const UserCard = ({ collaborateur }) => {
           icon={faBirthdayCake}
           className={style.icon}
         ></FontAwesomeIcon>
-        {collaborateur.birthdate} - 35ans
+        {collaborateur.birthdate}
       </p>
     </div>
   );

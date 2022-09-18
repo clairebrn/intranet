@@ -7,7 +7,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRightToBracket } from "@fortawesome/free-solid-svg-icons";
 import { useSelector } from "react-redux";
 import { useEffect } from "react";
-import logo from "../assets/logoipsum-271.svg";
 
 const NavBar = () => {
   const userStock = useSelector((state) => state.user.value);
@@ -19,9 +18,7 @@ const NavBar = () => {
         <div className={style.body}>
           <ul>
             <li className={style.logo}>
-              <NavLink to="/">
-                {/* <img src={logo} alt="logo" /> */}LOGO
-              </NavLink>
+              <NavLink to="/">INTRANET</NavLink>
             </li>
             <li>
               <NavLink to="/listecollaborateurs">
