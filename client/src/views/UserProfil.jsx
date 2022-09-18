@@ -37,10 +37,13 @@ const UserProfil = () => {
 
   const userStock = useSelector((state) => state.user.value);
   return (
-    <div>
-      <div className={style.user_profil_title}>
-        <h1>Mon profil</h1>
+    <div className={style.global_container}>
+      <div>
+        <div className={style.header_container}>
+          <h1>Mon profil</h1>
+        </div>
       </div>
+
       <div className={style.user_profil_card_container}>
         <UserCard collaborateur={userStock} />
       </div>
@@ -185,11 +188,7 @@ const UserProfil = () => {
 
           {/* bouton de validation */}
           <div className={style.btn_container}>
-            <button
-              onClick={onSave}
-              type="submit"
-              className={style.btn_update_profil}
-            >
+            <button onClick={onSave} type="submit" className={style.shadow}>
               Valider les modifications
             </button>
           </div>
