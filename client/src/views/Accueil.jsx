@@ -23,7 +23,7 @@ const Accueil = () => {
 
   async function fetchData() {
     const response = await APIService.getRandomCollaborateur();
-    // console.log("réponse du serveur", response);
+    console.log("réponse du serveur", response);
     setRandomCollaborateur(response);
   }
 

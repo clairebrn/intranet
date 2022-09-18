@@ -10,8 +10,8 @@ const ListeCollaborateurs = () => {
   const token = useToken();
   if (!token) return;
 
+  // ici nous récupérons les informations de chaque collaborateurs
   const [collaborateurs, setCollaborateurs] = useState(null);
-
   useEffect(() => {
     async function fetchData() {
       const response = await APIService.getCollaborateurs();
@@ -28,6 +28,8 @@ const ListeCollaborateurs = () => {
           <h1>Liste des collaborateurs</h1>
         </div>
       </div>
+      {/* avec le .map on affiche les informations */}
+      {/*  pour chaque collaborateur une carte profil sera crée*/}
 
       <div className={style.div_deux}>
         {collaborateurs &&

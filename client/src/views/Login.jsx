@@ -20,14 +20,20 @@ const Login = () => {
     });
   }
   console.log("formdata :", formData);
+
+  // fonction pour l'authentification
+  // si le login et mdp sont correct alors nous serons connecté
+  // récupérons le token d'authentification et les informations du user
   async function login(event) {
     event.preventDefault();
-
     const response = await APIService.login(formData);
     console.log("réponse du serveur", response);
+
     //envoyer les informations du user au reducer
     dispatch(userInfo(response.user));
+
     //stockage du user dans le navigateur
+    // sera utilisé sur la page d'accueil et la page profil
     sessionStorage.setItem("user", JSON.stringify(response.user));
 
     // stockage du token dans le local storage
