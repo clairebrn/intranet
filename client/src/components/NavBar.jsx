@@ -12,10 +12,6 @@ import logo from "../assets/logoipsum-271.svg";
 const NavBar = () => {
   const userStock = useSelector((state) => state.user.value);
 
-  // useEffect(() => {
-  //   console.log("stockage du user :", userStock);
-  // }, []);
-
   return (
     <>
       {/* //condition, si un utilisateur est connecté la navbar s'affichera */}
@@ -33,9 +29,7 @@ const NavBar = () => {
               </NavLink>
             </li>
             <li>
-              <NavLink to="/profil">
-                {/* Mon profil {collaborateur.firstname} */} Mon profil
-              </NavLink>
+              <NavLink to="/profil">Mon profil</NavLink>
             </li>
             <li>
               <NavLink to="/logout">

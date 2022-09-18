@@ -54,8 +54,6 @@
   text-align: center;
 }
 
-/* reste du form */
-
 .post_label {
   margin: 10px;
 }
@@ -87,15 +85,6 @@
   font-style: italic;
   font-size: 10px;
 }
-
-/* test */
-/* fieldset {
-  border-radius: 30px;
-}
-
-fieldset input {
-  border-radius: 30px;
-} */
 
 /* bouton de validation  */
 .btn_container {

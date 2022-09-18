@@ -172,20 +172,6 @@ const UserProfil = () => {
             />
           </div>
 
-          {/* test */}
-          {/* <fieldset>
-            <legend>
-              <label htmlFor="birthdate">Anniversaire</label>
-            </legend>
-            <input
-              type="date"
-              name="birthdate"
-              id="birthdate"
-              onInput={updateForm}
-              defaultValue={value.birthdate}
-            />
-          </fieldset> */}
-
           {/* bouton de validation */}
           <div className={style.btn_container}>
             <button onClick={onSave} type="submit" className={style.shadow}>

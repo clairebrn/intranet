@@ -7,7 +7,7 @@ import image from "../assets/logoipsum-271.svg";
 import * as APIService from "../services/Api.service";
 import { useNavigate } from "react-router-dom";
 
-const Login = (/* { setToken } */) => {
+const Login = () => {
   const [formData, setFormData] = useState({});
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -46,8 +46,6 @@ const Login = (/* { setToken } */) => {
 
         <div className={style.post_info}>
           <h1 className={style.post_title}>Connexion</h1>
-
-          {/* <pre>{JSON.stringify(formData, null, 2)}</pre> */}
 
           <div className={style.post_form}>
             <form action="" onSubmit={login}>

@@ -19,8 +19,7 @@ const UserCard = ({ collaborateur }) => {
       </p>
 
       <div>
-        <img src={collaborateur.photo} alt="" />
-        {/* <img src="https://picsum.photos/100/100" alt="photo de profil" /> */}
+        <img src={collaborateur.photo} alt="photo de profil de l'utilisateur" />
       </div>
 
       <p>
